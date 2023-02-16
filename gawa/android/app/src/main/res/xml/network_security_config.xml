@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Android 9 (API レベル 28) 以上を対象とするアプリのデフォルトコンフィグレーションは以下のとおりです。 -->
+    <!-- <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config> -->
+
+    <!-- Android 7.0 (API レベル 24) から Android 8.1 (API レベル 27) を対象とするアプリのデフォルトコンフィグレーションは以下のとおりです。 -->
+    <!-- <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config> -->
+    
+    <!-- Android 6.0 (API レベル 23) 以下を対象とするアプリのデフォルトコンフィグレーションは以下のとおりです。 -->
+    <!-- <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config> -->
+
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <!-- X.509 証明書を含むファイルを指す未加工のリソース ID。 証明書は、DER または PEM 形式でエンコードする必要があります。PEM 証明書の場合、ファイルには PEM 以外の余分なデータ（コメントなど）を含めないでください。 -->
+            <certificates src="@raw/root_ca"/>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <debug-overrides>
+        <trust-anchors>
+            <!-- X.509 証明書を含むファイルを指す未加工のリソース ID。 証明書は、DER または PEM 形式でエンコードする必要があります。PEM 証明書の場合、ファイルには PEM 以外の余分なデータ（コメントなど）を含めないでください。 -->
+            <certificates src="@raw/root_ca"/>
+            <certificates src="system" />
+        </trust-anchors>
+    </debug-overrides>    
+</network-security-config>
