@@ -13,7 +13,7 @@ class GawaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gawa App Demo',
+      title: 'SPA in GAWA アプリケーション',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
