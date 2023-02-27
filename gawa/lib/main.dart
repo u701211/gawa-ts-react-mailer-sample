@@ -15,7 +15,7 @@ class GawaApp extends StatelessWidget {
     return MaterialApp(
       title: 'SPA in GAWA アプリケーション',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.purple,
       ),
       home: const WebViewPage(),
     );
