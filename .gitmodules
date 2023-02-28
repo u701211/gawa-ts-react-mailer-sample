@@ -1,3 +1,6 @@
 [submodule "ts-react-mailer-sample"]
 	path = ts-react-mailer-sample
 	url = https://github.com/akatonboX/ts-react-mailer-sample.git
+[submodule "gawa"]
+	path = gawa
+	url = https://github.com/u701211/gawa.git
